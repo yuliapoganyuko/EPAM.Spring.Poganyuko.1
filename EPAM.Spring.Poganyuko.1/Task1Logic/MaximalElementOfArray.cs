@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1Logic
 {
     public static class MaximalElementOfArray
     {
-        #region Public Method
+        #region Public Methods
 
         public static int GetMaximalElement(int[] array)
         {
@@ -18,7 +13,7 @@ namespace Task1Logic
 
         #endregion
 
-        #region Private Method
+        #region Private Methods
 
         private static int GetMax(int[] array, int largest)
         {
