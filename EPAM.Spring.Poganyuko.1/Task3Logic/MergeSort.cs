@@ -19,19 +19,18 @@ namespace Task3Logic
 
         #region Private methods
 
-        private static int[] Sort(int[] array, int firstPosition, int lastPosition)
+        private static void Sort(int[] array, int firstPosition, int lastPosition)
         {
             if (firstPosition < lastPosition)
             {
                 int middlePosition = (firstPosition + lastPosition) / 2;
-                int[] leftPart = Sort(array, firstPosition, middlePosition);
-                int[] rightPart = Sort(array, middlePosition + 1, lastPosition);
+                Sort(array, firstPosition, middlePosition);
+                Sort(array, middlePosition + 1, lastPosition);
                 Merge(array, firstPosition, middlePosition, lastPosition);
             }
-            return array;
         }
 
-        private static int[] Merge(int[] array, int firstPosition, int middlePosition, int lastPosition)
+        private static void Merge(int[] array, int firstPosition, int middlePosition, int lastPosition)
         {
             int[] temporaryArray = new int[array.Length];
 
@@ -55,7 +54,6 @@ namespace Task3Logic
                 }
                 currentPosition++;
             }
-            return array;
         }
 
         #endregion
