@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4Logic
 {
-    public class StringsConcatenator
+    public static class StringsConcatenator
     {
         #region Public methods
 
@@ -14,14 +14,10 @@ namespace Task4Logic
         {
             if (string1 == null || string2 == null)
                 throw new ArgumentNullException();
-            string resultString = string.Empty;
-            //is it needed to check if strings are empty?
-            for (char literal = 'a'; literal <= 'z'; literal++)
-            {
-                if (string1.Contains(literal) || string2.Contains(literal))
-                    resultString = resultString.Insert(resultString.Length, literal.ToString());
-            }
-            return resultString;
+            //is it needed to check if strings are not empty?
+            char[] charsArray = string.Concat(string1, string2).Distinct().ToArray();
+            Array.Sort(charsArray);
+            return new string(charsArray);
         }
 
         #endregion
