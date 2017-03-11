@@ -19,7 +19,7 @@ namespace Task4Logic
             for (char literal = 'a'; literal <= 'z'; literal++)
             {
                 if (string1.Contains(literal) || string2.Contains(literal))
-                    resultString.Insert(resultString.Length, literal.ToString());
+                    resultString = resultString.Insert(resultString.Length, literal.ToString());
             }
             return resultString;
         }
