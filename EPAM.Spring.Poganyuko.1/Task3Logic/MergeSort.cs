@@ -10,9 +10,9 @@ namespace Task3Logic
     {
         #region Public methods
 
-        public static int[] Sort(int[] array)
+        public static void Sort(int[] array)
         {
-            
+            Sort(array, 0, array.Length - 1);
         }
 
         #endregion
@@ -54,6 +54,10 @@ namespace Task3Logic
                 }
                 currentPosition++;
             }
+
+            int remaining = middlePosition - currentLeft;
+            for (int i = 0; i <= remaining; i++)
+                array[currentPosition + i] = temporaryArray[currentLeft + i];
         }
 
         #endregion
