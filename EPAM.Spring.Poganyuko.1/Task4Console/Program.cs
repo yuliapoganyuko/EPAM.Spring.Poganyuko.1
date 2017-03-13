@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using Task4Logic;
 
 namespace Task4Console
@@ -23,8 +24,10 @@ namespace Task4Console
         private static string GetString()
         {
             Console.WriteLine("Enter the string");
-            //string inputString = Console.ReadLine();
-            return Console.ReadLine();
+            string inputString;
+            while (!Regex.IsMatch(inputString = Console.ReadLine(), @"^[a-zA-Z]+$"))
+                Console.WriteLine("The string should contain only symbols from 'a' to 'z'");
+            return inputString.ToLower();
         }
 
         #endregion

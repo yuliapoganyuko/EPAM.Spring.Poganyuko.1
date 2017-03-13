@@ -16,6 +16,8 @@ namespace Task1Logic
         /// <returns>Index of the maximal element in array</returns>
         public static int GetMaximalElement(int[] array)
         {
+            if (array == null)
+                throw new ArgumentNullException();
             return GetMax(array, 0, array.Length - 1);
         }
 
@@ -33,7 +35,12 @@ namespace Task1Logic
         /// <returns></returns>
         private static int GetMax(int[] array, int firstPosition, int lastPosition)
         {
-            int leftMax, rightMax;
+            if (array == null)
+                throw new ArgumentNullException();
+            if (firstPosition < 0 || firstPosition > array.Length-1 || firstPosition > lastPosition
+                || lastPosition < 0 || lastPosition > array.Length - 1)
+                throw new ArgumentOutOfRangeException();
+
             if (firstPosition == lastPosition)
                 return array[firstPosition];
             
@@ -46,8 +53,8 @@ namespace Task1Logic
 
             int middlePosition = (firstPosition + lastPosition) / 2;
             
-            leftMax = GetMax(array, firstPosition, middlePosition);
-            rightMax = GetMax(array, middlePosition + 1, lastPosition);
+            int leftMax = GetMax(array, firstPosition, middlePosition);
+            int rightMax = GetMax(array, middlePosition + 1, lastPosition);
             
             if (leftMax > rightMax)
                 return leftMax;

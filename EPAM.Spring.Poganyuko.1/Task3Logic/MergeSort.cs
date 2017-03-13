@@ -19,6 +19,8 @@ namespace Task3Logic
         /// <param name="array">Input array</param>
         public static void Sort(int[] array)
         {
+            if (array == null)
+                throw new ArgumentNullException();
             Sort(array, 0, array.Length - 1);
         }
 
@@ -34,6 +36,12 @@ namespace Task3Logic
         /// <param name="lastPosition">Index of last position of part in input array</param>
         private static void Sort(int[] array, int firstPosition, int lastPosition)
         {
+            if (array == null)
+                throw new ArgumentNullException();
+            if (firstPosition < 0 || firstPosition > array.Length - 1 || firstPosition > lastPosition
+                || lastPosition < 0 || lastPosition > array.Length - 1)
+                throw new ArgumentOutOfRangeException();
+
             if (firstPosition < lastPosition)
             {
                 int middlePosition = (firstPosition + lastPosition) / 2;
@@ -52,6 +60,13 @@ namespace Task3Logic
         /// <param name="lastPosition">Index of last position of second part to merge in input array</param>
         private static void Merge(int[] array, int firstPosition, int middlePosition, int lastPosition)
         {
+            if (array == null)
+                throw new ArgumentNullException();
+            if (firstPosition < 0 || firstPosition > array.Length - 1 || firstPosition > lastPosition
+                || lastPosition < 0 || lastPosition > array.Length - 1 || middlePosition > lastPosition
+                || middlePosition < 0 || middlePosition > array.Length - 1 || middlePosition < firstPosition)
+                throw new ArgumentOutOfRangeException();
+
             int[] temporaryArray = new int[array.Length];
 
             for (int i = firstPosition; i <= lastPosition; i++)
