@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Logic", "Task2Logic\Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Console", "Task2Console\Task2Console.csproj", "{F9431397-22B6-4249-AE49-1A752A75FC3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML Demo", "XML Demo\XML Demo.csproj", "{6FE8EE82-3E8D-4AA6-9190-ADC0849D1948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F9431397-22B6-4249-AE49-1A752A75FC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9431397-22B6-4249-AE49-1A752A75FC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9431397-22B6-4249-AE49-1A752A75FC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE8EE82-3E8D-4AA6-9190-ADC0849D1948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE8EE82-3E8D-4AA6-9190-ADC0849D1948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE8EE82-3E8D-4AA6-9190-ADC0849D1948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE8EE82-3E8D-4AA6-9190-ADC0849D1948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
