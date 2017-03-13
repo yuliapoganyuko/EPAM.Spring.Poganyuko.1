@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Task3Logic
 {
+    /// <summary>
+    /// Class provides functionality of merge sort
+    /// </summary>
     public static class MergeSort
     {
         #region Public methods
 
+        /// <summary>
+        /// Method sorts array
+        /// </summary>
+        /// <param name="array">Input array</param>
         public static void Sort(int[] array)
         {
             Sort(array, 0, array.Length - 1);
@@ -19,6 +26,12 @@ namespace Task3Logic
 
         #region Private methods
 
+        /// <summary>
+        /// Method sorts array dividing it into parts. Part is determined by first and last positions in array
+        /// </summary>
+        /// <param name="array">Input array</param>
+        /// <param name="firstPosition">Index of first position of part in input array</param>
+        /// <param name="lastPosition">Index of last position of part in input array</param>
         private static void Sort(int[] array, int firstPosition, int lastPosition)
         {
             if (firstPosition < lastPosition)
@@ -30,6 +43,13 @@ namespace Task3Logic
             }
         }
 
+        /// <summary>
+        /// Method merges two successive sorted parts of array. 
+        /// </summary>
+        /// <param name="array">Input array</param>
+        /// <param name="firstPosition">Index of first position of first part to merge in input array</param>
+        /// <param name="middlePosition">Index of last position of first part to merge in input array</param>
+        /// <param name="lastPosition">Index of last position of second part to merge in input array</param>
         private static void Merge(int[] array, int firstPosition, int middlePosition, int lastPosition)
         {
             int[] temporaryArray = new int[array.Length];
