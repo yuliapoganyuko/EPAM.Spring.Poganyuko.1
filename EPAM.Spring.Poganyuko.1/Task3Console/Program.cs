@@ -21,6 +21,10 @@ namespace Task3Console
 
         #region Private methods
 
+        /// <summary>
+        /// Methog gets the array of integers.
+        /// </summary>
+        /// <returns>The array consisting of integers.</returns>
         private static int[] GetArray()
         {
             Console.WriteLine("Enter the number of array elements:");
@@ -36,6 +40,11 @@ namespace Task3Console
             return sortedArray;
         }
 
+        /// <summary>
+        /// Methog gets the integer value.
+        /// </summary>
+        /// <param name="isPositiveNumber">Boolean flag showing if the integer value should be positive.</param>
+        /// <returns>The integer value.</returns>
         private static int GetInt(bool isPositiveNumber)
         {
             int number;

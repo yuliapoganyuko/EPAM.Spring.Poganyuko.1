@@ -21,6 +21,10 @@ namespace Task4Console
 
         #region Private methods
 
+        /// <summary>
+        /// Methog gets the string consisting of symbols from 'a' to 'z' using console.
+        /// </summary>
+        /// <returns>The string consisting of symbols from 'a' to 'z' in lower case.</returns>
         private static string GetString()
         {
             Console.WriteLine("Enter the string");
